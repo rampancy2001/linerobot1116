@@ -51,6 +51,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			case *linebot.TextMessage:
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")).Do(); err != nil {
 					log.Print(err)
+			case "老大":
+				linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")
 				}
 			}
 		}
