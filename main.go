@@ -50,8 +50,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
 				
-				if _, err = bot.ReplyMessage(event.ReplyToken, if message.text == "老大" {linebot.NewTextMessage("hi")} else {
-					linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")}).Do(); err != nil {
+				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")).Do(); err != nil {
 					log.Print(err)
 				}
 			}
