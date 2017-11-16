@@ -49,6 +49,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
 				switch message.Text {
+					case "你是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好!我是自動回覆的機器人,在CoC台灣英雄聯盟為您服務,開發者為Ryan Chang")).Do()
 					case "老大": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("歡迎COC的朋友們!")).Do()
 					case "豪璘是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("NG的啦")).Do()
 					case "雨靖是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("X大香又甜")).Do()
@@ -60,6 +61,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "罵是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("黑人")).Do()
 					case "幹": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話")).Do()
 					case "哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
+					case "哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
+					case "哈哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
+					case "哈哈哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
 					case "...": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()
 					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()
