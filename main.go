@@ -49,7 +49,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				if event.message.Text = "老大" {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們?!")).Do(); err != nil {
+				if event.message.Text == "老大" {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們?!")).Do(); err != nil {
 					log.Print(err)}
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")).Do(); err != nil {
 					log.Print(err)
