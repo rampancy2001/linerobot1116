@@ -49,12 +49,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				if (message.Text == "老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們?!")).Do()
+				if (message.Text == "老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")).Do()
 							      }
-				
-				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" 歡迎COC的朋友們!")).Do(); err != nil {
-					log.Print(err)
-				}
+				if (message.Text == "豪璘是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("NG的啦")).Do()
+							      }				
+				if (message.Text == "雨靖是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("X大香又甜")).Do()
+							      }	
+				if (message.Text == "彥增是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("天龍國人")).Do()
+							      }	
 			}
 		}
 	}
