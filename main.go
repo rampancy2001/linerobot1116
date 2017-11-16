@@ -48,29 +48,27 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
-				if (message.Text == "老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(" 歡迎COC的朋友們!")).Do()}
-				if (message.Text == "豪璘是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("NG的啦")).Do()}				
-				if (message.Text == "雨靖是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("X大香又甜")).Do()}	
-				if (message.Text == "彥增是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("天龍國人")).Do()}
-				if (message.Text == "早安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()}
-				if (message.Text == "午安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("睡醒了嗎")).Do()}
-				if (message.Text == "下午安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("都幾點了")).Do()}
-				if (message.Text == "晚安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("祝好夢")).Do()}
-				if (message.Text == "罵是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("黑人")).Do()}
-				if (message.Text == "幹") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話")).Do()}	
-				if (message.Text == "哈") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()}	
-				if (message.Text == "...") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()}	
-				if (message.Text == "喔") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()}
-				if (message.Text == "抽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()}
-				if (message.Text == "老大是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()}
-				if (message.Text == "抱歉") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()}
-				if (message.Text == "對不起") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()}
-				if (message.Text == "傻眼") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("雨靖的口頭禪")).Do()}
-				if (message.Text == "好呀") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("一言既出 駟馬難追")).Do()}
-				if (message.Text == "感謝老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()}
 				switch message.Text {
-					case "1": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()
-					case "2": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大2")).Do()
+					case "老大": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("歡迎COC的朋友們!")).Do()
+					case "豪璘是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("NG的啦")).Do()
+					case "雨靖是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("X大香又甜")).Do()
+					case "彥增是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("天龍國人")).Do()
+					case "早安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()
+					case "午安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("睡醒了嗎")).Do()
+					case "下午安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("都幾點了")).Do()
+					case "晚安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("祝好夢")).Do()
+					case "罵是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("黑人")).Do()
+					case "幹": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話")).Do()
+					case "哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
+					case "...": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()
+					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
+					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()
+					case "老大是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()
+					case "抱歉": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()
+					case "對不起": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()
+					case "傻眼": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("雨靖的口頭禪")).Do()
+					case "好呀": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("一言既出 駟馬難追")).Do()
+					case "感謝老大": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()
 				}
 			}
 		}
