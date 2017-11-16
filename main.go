@@ -98,7 +98,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "上班了": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("上班還不是都在混")).Do()
 					case "太強了": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("跪")).Do()
 					case "笑點在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()
-					if strings.contains(message.Text,"test") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("OK")).Do()} 
+					if strings.Contains(message.Text,"test") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("OK")).Do()} 
 				}
 			}
 		}
