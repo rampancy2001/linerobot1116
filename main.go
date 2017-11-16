@@ -68,6 +68,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if (message.Text == "傻眼") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("雨靖的口頭禪")).Do()}
 				if (message.Text == "好呀") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("一言既出 駟馬難追")).Do()}
 				if (message.Text == "感謝老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()}
+				switch message.Text {
+					case "1": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()
+					case "2": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大2")).Do()
+				}
 			}
 		}
 	}
