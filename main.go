@@ -97,7 +97,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"死我") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("RIP")).Do()}
 				if strings.Contains(message.Text,"幫忙捐兵") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("又來了,請大家幫忙捐兵喔")).Do()}
 				if strings.Contains(message.Text,"請問") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("請各位幫忙回答喔")).Do()}
-				if strings.Contains(message.Text,"測試") {bot.ReplyMessage(event.ReplyToken, linebot.NewImagemapMessage("http://www.cnidea.net/toutiao/u/20160812/162241647425005301640.jpg","http://www.cnidea.net/toutiao/u/20160812/162241647425005301640.jpg",linebot.ImagemapBaseSize{1040, 1040})).Do()}
+				if strings.Contains(message.Text,"測試") {bot.ReplyMessage(event.ReplyToken, linebot.NewImagemapMessage("http://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg","hhttp://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg",linebot.ImagemapBaseSize{200, 200})).Do()}
 			}
 		}
 	}
