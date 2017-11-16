@@ -56,7 +56,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if (message.Text == "早安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()}
 				if (message.Text == "罵是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("黑人")).Do()}
 				if (message.Text == "幹") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話")).Do()}	
-				if (strings.contains (message.text,"哈")) {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()}	
+				if strings.contains(message.text,"哈") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()}	
 				if (message.Text == "...") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()}	
 			}
 		}
