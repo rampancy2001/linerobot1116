@@ -53,6 +53,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if (message.Text == "雨靖是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("X大香又甜")).Do()}	
 				if (message.Text == "彥增是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("天龍國人")).Do()}
 				if (message.Text == "早安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()}
+				if (message.Text == "午安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("睡醒了嗎")).Do()}
+				if (message.Text == "下午安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("都幾點了")).Do()}
 				if (message.Text == "晚安") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("祝好夢")).Do()}
 				if (message.Text == "罵是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("黑人")).Do()}
 				if (message.Text == "幹") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話")).Do()}	
@@ -61,6 +63,11 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if (message.Text == "喔") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()}
 				if (message.Text == "抽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()}
 				if (message.Text == "老大是誰") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()}
+				if (message.Text == "抱歉") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()}
+				if (message.Text == "對不起") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出  部是常識吧")).Do()}
+				if (message.Text == "傻眼") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("雨靖的口頭禪")).Do()}
+				if (message.Text == "好呀") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("一言既出 駟馬難追")).Do()}
+				if (message.Text == "感謝老大") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("讚嘆老大")).Do()}
 			}
 		}
 	}
