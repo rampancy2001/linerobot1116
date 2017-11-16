@@ -65,15 +65,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "下午安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("都幾點了,昨晚在幹嘛")).Do()
 					case "晚安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("祝好夢")).Do()
 					case "hi": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好")).Do()
-					case "幹": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()
 					case "看": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()
-					case "哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
-					case "哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
-					case "哈哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
-					case "哈哈哈哈": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()
-					case "...": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()
-					case "....": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()
-					case ".....": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()
 					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "哦": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()
@@ -88,7 +80,6 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "幫忙捐兵": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("又來了,請大家幫忙捐兵喔")).Do()
 					case "誰在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我是老大的代理機器人,請問有什麼事呢?")).Do()
 					case "有誰在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我是老大的代理機器人,請問有什麼事呢?")).Do()
-					case "生日快樂": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("大家一起唱~祝你生日快樂~祝你生日快樂~祝你生日快樂~祝你生日快樂")).Do()
 					case "真可愛": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("啾咪")).Do()
 					case "去洗澡": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("洗澡卡get!")).Do()
 					case "@@": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("^_^")).Do()
@@ -99,8 +90,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "太強了": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("跪")).Do()
 					case "笑點在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()
 				}
-					if strings.Contains(message.Text,"test") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("OK")).Do()} 
-				
+				if strings.Contains(message.Text,"生日快樂") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("大家一起唱~祝你生日快樂~祝你生日快樂~祝你生日快樂~祝你生日快樂")).Do()} 
+				if strings.Contains(message.Text,"哈哈") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()}
+				if strings.Contains(message.Text,"...") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不說話就是承認")).Do()}
+				if strings.Contains(message.Text,"幹") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()}
 			}
 		}
 	}
