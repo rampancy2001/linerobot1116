@@ -97,7 +97,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"死我") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("RIP")).Do()}
 				if strings.Contains(message.Text,"幫忙捐兵") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("又來了,請大家幫忙捐兵喔")).Do()}
 				if strings.Contains(message.Text,"請問") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("請各位幫忙回答喔")).Do()}
-				if strings.Contains(message.Text,"google") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/220px-Google_2015_logo.svg.png")).Do()}
+				if strings.Contains(message.Text,"??") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("http://www.cnidea.net/toutiao/u/20160812/162241647425005301640.jpg")).Do()}
 			}
 		}
 	}
