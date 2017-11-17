@@ -68,7 +68,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "看": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()
 					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "哦": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
-					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想幹嘛, 以為有圖?")).Do()
+					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage("https://cdn2.ettoday.net/images/1400/d1400127.jpg","https://ruclip.com/chimg/10/UCS-nRoF-0IcWod-lXdQBTBw.jpg")).Do()
 					case "老大是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()
 					case "抱歉": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出口部是常識吧")).Do()
 					case "對不起": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出口部是常識吧")).Do()
@@ -97,9 +97,10 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"死我") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("RIP")).Do()}
 				if strings.Contains(message.Text,"幫忙捐兵") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("又來了,請大家幫忙捐兵喔")).Do()}
 				if strings.Contains(message.Text,"請問") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("請各位幫忙回答喔")).Do()}
-				if strings.Contains(message.Text,",1") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",1"),",1")).Do()}
-				if strings.Contains(message.Text,",2") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",1"),",2")).Do()}
-				if strings.Contains(message.Text,",3") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",1"),",3")).Do()}
+				if strings.Contains(message.Text,",1") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",1"),"1")).Do()}
+				if strings.Contains(message.Text,",2") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",2"),"2")).Do()}
+				if strings.Contains(message.Text,",3") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",3"),"3")).Do()}
+				if strings.Contains(message.Text,",4") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(strings.Trim(message.Text,",4"),"4")).Do()}
 				if strings.Contains(message.Text,"測試") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("1","1")).Do()}
 				//if strings.Contains(message.Text,"測試2") {bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage("http://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg","http://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg")).Do()}
 
