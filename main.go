@@ -19,12 +19,14 @@ import (
 	"os"
 	"github.com/line/line-bot-sdk-go/linebot"
 	"strings"
+	"github.com/PuerkitoBio/goquery"
 )
 
 var bot *linebot.Client
 
 func main() {
 	var err error
+	var err2 error
 	bot, err = linebot.New(os.Getenv("ChannelSecret"), os.Getenv("ChannelAccessToken"))
 	log.Println("Bot:", bot, " err:", err)
 	http.HandleFunc("/callback", callbackHandler)
@@ -122,7 +124,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"3,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("3",strings.Trim(message.Text,"3,"))).Do()}
 				if strings.Contains(message.Text,"4,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("4",strings.Trim(message.Text,"4,"))).Do()}
 				if strings.Contains(message.Text,"測試") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("2","18")).Do()}
-				if strings.Contains(message.Text,"test") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("18","2")).Do()}
+				if strings.Contains(message.Text,"joke") {
+					doc, err2 := goquery.NewDocument("http://www.qiushibaike.com")
+  					if err2 != nil {log.Fatal(err2)}
+  					doc.Find(".content").Each(func(i int, s *goquery.Selection){
+    					bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage(s)).Do()
+ 					 })
+
+									 }
 				//if strings.Contains(message.Text,"測試2") {bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage("http://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg","http://www.wyattresearch.com/wp-content/uploads/2015/01/6_logo_predesign.jpg")).Do()}
 				if strings.Contains(message.Text,"老大") {
 					if strings.Contains(message.Text,"靠你") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("老大有寬闊肩膀可以依偎")).Do()}
