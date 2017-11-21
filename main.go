@@ -19,14 +19,14 @@ import (
 	"os"
 	"github.com/line/line-bot-sdk-go/linebot"
 	"strings"
-	"github.com/PuerkitoBio/goquery"
+//	"github.com/PuerkitoBio/goquery"
 )
 
 var bot *linebot.Client
 
 func main() {
 	var err error
-	var err2 error
+//	var err2 error
 	bot, err = linebot.New(os.Getenv("ChannelSecret"), os.Getenv("ChannelAccessToken"))
 	log.Println("Bot:", bot, " err:", err)
 	http.HandleFunc("/callback", callbackHandler)
