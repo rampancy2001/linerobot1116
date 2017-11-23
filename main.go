@@ -74,7 +74,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "哦": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
 					case "幹": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()
-					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage("https://www.itsfun.com.tw/cacheimg/0d/30/571d8eeac925c21c771548e75630.jpg","https://www.itsfun.com.tw/cacheimg/0d/30/571d8eeac925c21c771548e75630.jpg")).Do()
+					case "抽": bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage("https://www.itsfun.com.tw/cacheimg/66/0c/eda9d251c3bd769ac820552b2ff1.jpg","https://www.itsfun.com.tw/cacheimg/66/0c/eda9d251c3bd769ac820552b2ff1.jpg")).Do()
 					case "老大是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()
 					case "抱歉": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出口部是常識吧")).Do()
 					case "對不起": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出口部是常識吧")).Do()
@@ -123,6 +123,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"ps4") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("誰有玩PS4 加個好友啦")).Do()}
 				if strings.Contains(message.Text,"野生") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("歐買尬!本人比較帥")).Do()}
 				if strings.Contains(message.Text,"媽的") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()}
+				if strings.Contains(message.Text,"ㄇㄉ") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()}
 				if strings.Contains(message.Text,"吃屎") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("又油又香 粉好吃")).Do()}
 				if strings.Contains(message.Text,"妹妹") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("醒醒吧~你沒有妹妹")).Do()}
 				if strings.Contains(message.Text,"謝謝") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不客氣的")).Do()}
@@ -131,6 +132,12 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"星期一") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("每個星期一從醒來那一刻便覺得心裡有一種難以擺脫的壓抑，覺得很鬱悶。")).Do()}
 				if strings.Contains(message.Text,"星期五") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("T.G.I.F.喔喔喔喔喔喔耶")).Do()}
 				if strings.Contains(message.Text,"關鍵字") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("想知道更多服務查詢請回傳 /help")).Do()}
+				if strings.Contains(message.Text,"地震") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("媽呀, 嚇死人, 以下開始報平安!")).Do()}
+				if strings.Contains(message.Text,"http") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("謝謝分享!愛你喔")).Do()}
+				if strings.Contains(message.Text,"八兩金") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("新莊八兩金在此")).Do()}
+				if strings.Contains(message.Text,"我朋友") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("先承認你就是你朋友吧")).Do()}
+				if strings.Contains(message.Text,"我可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你有不可以的嗎")).Do()}
+				if strings.Contains(message.Text,"點名") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("老大 1")).Do()}
 				if strings.Contains(message.Text,"1,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("1",strings.Trim(message.Text,"1,"))).Do()}
 				if strings.Contains(message.Text,"2,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("2",strings.Trim(message.Text,"2,"))).Do()}
 				if strings.Contains(message.Text,"3,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("3",strings.Trim(message.Text,"3,"))).Do()}
