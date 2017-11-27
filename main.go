@@ -38,7 +38,7 @@ func main() {
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	events, err := bot.ParseRequest(r)
-	var a string
+	var a int
 
 	if err != nil {
 		if err == linebot.ErrInvalidSignature {
@@ -161,8 +161,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"ininder") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("比滑石soft一點")).Do()}
 				if strings.Contains(message.Text,"笑話") {
 					a=rand.Intn(2)
-					if a == "1" {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("1")).Do()}
-					if a == "0" {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("0")).Do()}
+					if a == 1 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("1")).Do()}
+					if a == 0 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("0")).Do()}
 				}
 				if strings.Contains(message.Text,"1,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("1",strings.Trim(message.Text,"1,"))).Do()}
 				if strings.Contains(message.Text,"2,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("2",strings.Trim(message.Text,"2,"))).Do()}
