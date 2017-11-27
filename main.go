@@ -38,7 +38,7 @@ func main() {
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	events, err := bot.ParseRequest(r)
-	var a int
+	var a string
 
 	if err != nil {
 		if err == linebot.ErrInvalidSignature {
