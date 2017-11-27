@@ -19,7 +19,7 @@ import (
 	"os"
 	"github.com/line/line-bot-sdk-go/linebot"
 	"strings"
-//	"math/rand"
+	"math/rand"
 //	"github.com/PuerkitoBio/goquery"
 )
 
@@ -38,7 +38,7 @@ func main() {
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	events, err := bot.ParseRequest(r)
-
+	var a int
 
 	if err != nil {
 		if err == linebot.ErrInvalidSignature {
@@ -97,7 +97,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "笑點在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()
 					case "機器人": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
 					case "/help": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
-//					case "隨機": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("就是" + rand.Intn(100))).Do()
+//					case "笑話": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("就是" + rand.Intn(100))).Do()
 					case "#1": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("這你也相信喔..幾歲了")).Do()
 					case "#2": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("系統建置中~~預計2050年上線")).Do()
 					case "#9": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("動動腰起床了, 生意上門喔!")).Do()
@@ -159,6 +159,11 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"30cm") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
 				if strings.Contains(message.Text,"30公分") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
 				if strings.Contains(message.Text,"ininder") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("比滑石soft一點")).Do()}
+				if strings.Contains(message.Text,"笑話") {
+					a=rand.Intn(2)
+					if a=1 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("1")).Do()}
+					if a=0 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("0")).Do()}
+				}
 				if strings.Contains(message.Text,"1,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("1",strings.Trim(message.Text,"1,"))).Do()}
 				if strings.Contains(message.Text,"2,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("2",strings.Trim(message.Text,"2,"))).Do()}
 				if strings.Contains(message.Text,"3,") {bot.ReplyMessage(event.ReplyToken, linebot.NewStickerMessage("3",strings.Trim(message.Text,"3,"))).Do()}
