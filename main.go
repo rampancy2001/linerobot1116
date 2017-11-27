@@ -19,6 +19,7 @@ import (
 	"os"
 	"github.com/line/line-bot-sdk-go/linebot"
 	"strings"
+	"math/rand"
 //	"github.com/PuerkitoBio/goquery"
 )
 
@@ -37,6 +38,7 @@ func main() {
 
 func callbackHandler(w http.ResponseWriter, r *http.Request) {
 	events, err := bot.ParseRequest(r)
+
 
 	if err != nil {
 		if err == linebot.ErrInvalidSignature {
@@ -95,6 +97,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "笑點在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()
 					case "機器人": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
 					case "/help": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
+					case "隨機": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(rand.Intn(100))).Do()
 					case "#1": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("這你也相信喔..幾歲了")).Do()
 					case "#2": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("系統建置中~~預計2050年上線")).Do()
 					case "#9": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("動動腰起床了, 生意上門喔!")).Do()
