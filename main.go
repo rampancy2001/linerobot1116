@@ -160,7 +160,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"溼了") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("溼主你好")).Do()}
 				if strings.Contains(message.Text,"30cm") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
 				if strings.Contains(message.Text,"30公分") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
-				if strings.Contains(message.Text,"ininder") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("比滑石soft一點")).Do()}
+				if strings.Contains(message.Text,"ininder") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("沒30cm就請低調點")).Do()}
 				if strings.Contains(message.Text,"笑話") {
 					a=rand.Intn(2)
 					if a == 1 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("1")).Do()}
