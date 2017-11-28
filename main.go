@@ -55,7 +55,6 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 			case *linebot.TextMessage:
 				switch message.Text {
 					case "你是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好!我是自動回覆的機器人,在CoC台灣英雄聯盟為您服務")).Do()
-					case "rampancy": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好!我是自動回覆的機器人,在CoC台灣英雄聯盟為您服務")).Do()
 					case "老大": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我是老大的代理機器人,請問有什麼事呢?")).Do()
 					case "謝老大": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("老大姓張不姓謝喔")).Do()
 					case "豪璘是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("NG的啦")).Do()
@@ -65,7 +64,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "瞬哥是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("澳洲打工仔")).Do()
 					case "Jonas是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("Jonas")).Do()
 					case "大家好": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好呀")).Do()
-					case "大家早": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()
+					case "大家早": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你也早!")).Do()
 					case "你好": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("嘿你好")).Do()
 					case "早安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("安安, 大家好!")).Do()
 					case "午安": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("睡醒了嗎?太晚了吧")).Do()
@@ -75,8 +74,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "Hi": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好")).Do()
 					case "嗨": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你好")).Do()
 					case "看": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("別以為不知道你在說髒話")).Do()
-					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
-					case "哦": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("敷衍誰")).Do()
+					case "喔": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("喔屁喔")).Do()
+					case "哦": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("哦屁喔")).Do()
 					case "幹": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("ㄜ, 別說髒話啦")).Do()					
 					case "老大是誰": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你是在問那個玉樹臨風的帥哥?")).Do()
 					case "抱歉": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("道歉時露出X部是常識吧")).Do()
@@ -95,7 +94,6 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					case "上班了": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("上班還不是都在混")).Do()
 					case "太強了": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("跪")).Do()
 					case "笑點在": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你媽知道你在這裡po廢文嗎")).Do()
-					case "機器人": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
 					case "/help": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()
 					case "#1": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("這你也相信喔..幾歲了")).Do()
 					case "#2": bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("系統建置中~~預計2050年上線")).Do()
@@ -155,6 +153,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"扶") {
 					if strings.Contains(message.Text,"過馬路") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("積積陰陰德")).Do()}
 					}
+				if strings.Contains(message.Text,"嗎") {
+					if strings.Contains(message.Text,"會") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
+					if strings.Contains(message.Text,"是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
+					if strings.Contains(message.Text,"可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
+					}
+				if strings.Contains(message.Text,"中") {
+					if strings.Contains(message.Text,"出來") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("簡稱中出來")).Do()}
+					}
 				if strings.Contains(message.Text,"期待") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我割你的臍帶")).Do()}
 				if strings.Contains(message.Text,"更新") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("太好了, 快點來下載")).Do()}
 				if strings.Contains(message.Text,"贏了") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("喔耶, 爽呀")).Do()}
@@ -164,6 +170,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"30cm") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
 				if strings.Contains(message.Text,"30公分") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("皮就佔29公分")).Do()}
 				if strings.Contains(message.Text,"ininder") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("沒30cm就請低調點")).Do()}
+				if strings.Contains(message.Text,"XD") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("OGC")).Do()}
 				if strings.Contains(message.Text,"笑話") {
 					a=rand.Intn(8)
 					if a == 0 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有一個國家舉辦最噁心比賽，至最後決賽時剩下三個人爭冠，其中一個人拿了一杯尿，在嘴中漱了漱，吞下，哈的一聲，全場鼓掌想冠軍必落於此家。第二個人從袋中拿出一堆蟑螂，剝了翅膀就嘖嘖嘖的吸牠的肚子，不時還吐出一兩隻腳,吃到第十隻的時後,國王面有菜色的說不用吃了你這樣就第一名了。 此時見第三個人拿出一杯液體，說，這是我半年前感冒到現在，每次吐的痰都收集在裡面，我現在要把它喝完。只見一整杯白白黃黃還帶泡泡的，他搖了搖，試圖讓有些積太久快要凝固的化開， 國王眼淚都要掉下來了，說：不用了不用了你只要喝一口你就冠軍了～這人便拿起杯子咕嘟咕嘟地開始喝，因為很濃又很多過了五分多鐘才喝完，此時全場已淚流滿面，國王說幹嘛我不是叫你喝一口就冠軍了嗎？這人回答道，我也只是想喝一口，但是我一直咬不斷～～")).Do()}
