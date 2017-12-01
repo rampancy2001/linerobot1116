@@ -190,6 +190,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"三星") {
 					if strings.Contains(message.Text,"11本") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("哇~太強啦,偶像")).Do()}
 					}
+				if strings.Contains(message.Text,"你") {
+					if strings.Contains(message.Text,"慢") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("剛睡醒呀")).Do()}
+					}
 				if strings.Contains(message.Text,"期待") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我割你的臍帶")).Do()}
 				if strings.Contains(message.Text,"更新") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("太好了, 快點來下載")).Do()}
 				if strings.Contains(message.Text,"贏了") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("喔耶, 爽呀")).Do()}
