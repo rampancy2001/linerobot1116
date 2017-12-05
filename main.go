@@ -20,6 +20,7 @@ import (
 	"github.com/line/line-bot-sdk-go/linebot"
 	"strings"
 	"math/rand"
+	"time"
 //	"github.com/PuerkitoBio/goquery"
 )
 
