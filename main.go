@@ -207,7 +207,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"XD") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("OGC")).Do()}
 				if strings.Contains(message.Text,"愛你") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羞 >///<")).Do()}
 				if strings.Contains(message.Text,"也知道") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("根本有預知的神力呀, 佩服")).Do()}
-				if strings.Contains(message.Text,"超帥") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("就像老大一樣")).Do()}
+				if strings.Contains(message.Text,"超帥") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("別以為你長得帥我就不打你")).Do()}
 				if strings.Contains(message.Text,"爽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我也要一起爽")).Do()}
 				if strings.Contains(message.Text,"打我") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("打你應該，不打你悲哀!")).Do()}
 				if strings.Contains(message.Text,"賠") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("聊得挺投緣，賠點醫藥費算了。")).Do()}
@@ -222,6 +222,12 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"夢遺") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("貧僧乃少林寺方丈，法號夢遺。阿彌陀佛，我隨風而來，隨風而去...")).Do()}
 				if strings.Contains(message.Text,"好吃") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("從來沒有試過這麼清新脫俗的感覺，牛肉的鮮，撒尿蝦的甜，混在一起的味道，竟然比「老鼠般」有過之而不及，正如比我的初戀更加詩情畫意，所謂舉頭望明月，低頭思故鄉，好詩！好詩啊！")).Do()}
 				if strings.Contains(message.Text,"騙") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("憑你的智慧，我唬得了你嗎？")).Do()}
+				if strings.Contains(message.Text,"興趣") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
+				if strings.Contains(message.Text,"責任") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
+				if strings.Contains(message.Text,"普通") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("錯！這並不是個普通的箱子，它是箱中之神，簡稱箱神！")).Do()}
+				if strings.Contains(message.Text,"服了") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("I服了You")).Do()}
+				if strings.Contains(message.Text,"危險") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你回火星吧，地球是很危險的")).Do()}
+				if strings.Contains(message.Text,"尊敬") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我對你的敬仰真是如滔滔江水，連綿不絕，又有如黃河泛濫一發不可收拾。")).Do()}
 				if strings.Contains(message.Text,"笑話") {
 					a=rand.Intn(8)
 					if a == 0 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有一個國家舉辦最噁心比賽，至最後決賽時剩下三個人爭冠，其中一個人拿了一杯尿，在嘴中漱了漱，吞下，哈的一聲，全場鼓掌想冠軍必落於此家。第二個人從袋中拿出一堆蟑螂，剝了翅膀就嘖嘖嘖的吸牠的肚子，不時還吐出一兩隻腳,吃到第十隻的時後,國王面有菜色的說不用吃了你這樣就第一名了。 此時見第三個人拿出一杯液體，說，這是我半年前感冒到現在，每次吐的痰都收集在裡面，我現在要把它喝完。只見一整杯白白黃黃還帶泡泡的，他搖了搖，試圖讓有些積太久快要凝固的化開， 國王眼淚都要掉下來了，說：不用了不用了你只要喝一口你就冠軍了～這人便拿起杯子咕嘟咕嘟地開始喝，因為很濃又很多過了五分多鐘才喝完，此時全場已淚流滿面，國王說幹嘛我不是叫你喝一口就冠軍了嗎？這人回答道，我也只是想喝一口，但是我一直咬不斷～～")).Do()}
