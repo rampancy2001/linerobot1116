@@ -127,6 +127,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"單身") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("報名專線: 控八控控-控啾里控控控")).Do()}
 					if strings.Contains(message.Text,"閒") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("在忙也要跟你喝一杯咖啡")).Do()}
 					if strings.Contains(message.Text,"快") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不要一直催老大, 一直催一直催")).Do()}
+					if strings.Contains(message.Text,"公分") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("相信我, 老大30公分")).Do()}
 				}
 				if strings.Contains(message.Text,"生日快樂") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("大家一起唱~祝你生日快樂~祝你生日快樂~祝你生日快樂~祝你生日快樂")).Do()} 
 				if strings.Contains(message.Text,"哈哈哈哈哈哈") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("超級爆笑的啦")).Do()}
@@ -178,9 +179,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"過馬路") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("積積陰陰德")).Do()}
 					}
 				if strings.Contains(message.Text,"嗎") {
-					if strings.Contains(message.Text,"會") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
-					if strings.Contains(message.Text,"是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
-					if strings.Contains(message.Text,"可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,恩災")).Do()}
+					if strings.Contains(message.Text,"會") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
+					if strings.Contains(message.Text,"是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
+					if strings.Contains(message.Text,"可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
 					}
 				if strings.Contains(message.Text,"中") {
 					if strings.Contains(message.Text,"出來") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("簡稱中出來")).Do()}
@@ -240,11 +241,14 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					}
 					if strings.Contains(message.Text,"廢物") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有種再說一次")).Do()}
 					if strings.Contains(message.Text,"爛") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有種再說一次")).Do()}
+					if strings.Contains(message.Text,"笨") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有種再說一次")).Do()}
+					if strings.Contains(message.Text,"臭") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有種再說一次")).Do()}
 					if strings.Contains(message.Text,"功能") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
 					if strings.Contains(message.Text,"幹嘛") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
 					if strings.Contains(message.Text,"會什麼") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
 					if strings.Contains(message.Text,"技能") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
 					if strings.Contains(message.Text,"服務") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
+					if strings.Contains(message.Text,"守則") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("第一:機器人不得傷害人類，或因不作為(袖手旁觀)使人類受到傷害；第二:除非違背第一法則，機器人必須服從人類的命令；第三:在不違背第一及第二法則下，機器人必須保護自己。")).Do()}
 				}
 			}
 		}
