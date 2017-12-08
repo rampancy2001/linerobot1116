@@ -124,7 +124,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"幹嘛") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("在你後面喜滋滋地看著你")).Do()}
 					if strings.Contains(message.Text,"幾歲") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("18歲")).Do()}
 					if strings.Contains(message.Text,"厲害") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("鵝樂告無大計")).Do()}
-					if strings.Contains(message.Text,"單身") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("報名專線: 控八控控-控啾里控控控")).Do()}
+					if strings.Contains(message.Text,"單身") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("曾经有一份真诚的爱情放在我面前，我没有珍惜，等我失去的时候我才后悔莫及，人世间最痛苦的事莫过于此。如果上天能够给我一个再来一次的机会，我会对那个女孩子说三个字：我爱你。如果非要在这份爱上加上一个期限，我希望是……一万年！")).Do()}
 					if strings.Contains(message.Text,"閒") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("在忙也要跟你喝一杯咖啡")).Do()}
 					if strings.Contains(message.Text,"快") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("不要一直催老大, 一直催一直催")).Do()}
 					if strings.Contains(message.Text,"公分") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("相信我, 老大30公分")).Do()}
