@@ -180,9 +180,9 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"過馬路") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("積積陰陰德")).Do()}
 					}
 				if strings.Contains(message.Text,"嗎") {
-					if strings.Contains(message.Text,"會") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
-					if strings.Contains(message.Text,"是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
-					if strings.Contains(message.Text,"可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("既然你誠心誠意的發問了,我們就大發慈悲的告訴你,哇恩災")).Do()}
+					if strings.Contains(message.Text,"會") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("嗯..好問題..")).Do()}
+					if strings.Contains(message.Text,"是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("嗯..好問題..")).Do()}
+					if strings.Contains(message.Text,"可以") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("嗯..好問題..")).Do()}
 					}
 				if strings.Contains(message.Text,"中") {
 					if strings.Contains(message.Text,"出來") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("簡稱中出來")).Do()}
@@ -221,7 +221,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"有空") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我一秒鐘幾十萬上下，我會和你去踢球？")).Do()}
 				if strings.Contains(message.Text,"掃地") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("掃地只不過是我的表面工作，我真正地身份是一位研究僧。")).Do()}
 				if strings.Contains(message.Text,"夢遺") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("貧僧乃少林寺方丈，法號夢遺。阿彌陀佛，我隨風而來，隨風而去...")).Do()}
-				if strings.Contains(message.Text,"好吃") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("從來沒有試過這麼清新脫俗的感覺，牛肉的鮮，撒尿蝦的甜，混在一起的味道，竟然比「老鼠般」有過之而不及，正如比我的初戀更加詩情畫意，所謂舉頭望明月，低頭思故鄉，好詩！好詩啊！")).Do()}
+				if strings.Contains(message.Text,"好吃") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羅馬不是一天造成的")).Do()}
 				if strings.Contains(message.Text,"騙") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("憑你的智慧，我唬得了你嗎？")).Do()}
 				if strings.Contains(message.Text,"興趣") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
 				if strings.Contains(message.Text,"責任") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
@@ -279,6 +279,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"服務") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("您好, 謝謝您使用本服務, 預借現金請回傳 #1, 查詢即時天氣請回傳 #2, 回報問題請回傳 #9 將有真人為您服務")).Do()}
 					if strings.Contains(message.Text,"守則") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("第一:機器人不得傷害人類，或因不作為(袖手旁觀)使人類受到傷害；第二:除非違背第一法則，機器人必須服從人類的命令；第三:在不違背第一及第二法則下，機器人必須保護自己。")).Do()}
 					if strings.Contains(message.Text,"偷懶") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("誰...誰叫我")).Do()}
+					if strings.Contains(message.Text,"頂嘴") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("是...是小弟的不是")).Do()}
 				}
 			}
 		}
