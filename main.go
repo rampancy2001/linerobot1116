@@ -209,26 +209,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"愛你") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羞 >///<")).Do()}
 				if strings.Contains(message.Text,"也知道") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("根本有預知的神力呀, 佩服")).Do()}
 				if strings.Contains(message.Text,"超帥") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("別以為你長得帥我就不打你")).Do()}
-				if strings.Contains(message.Text,"爽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我也要一起爽")).Do()}
-				if strings.Contains(message.Text,"打我") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("打你應該，不打你悲哀!")).Do()}
-				if strings.Contains(message.Text,"賠") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("聊得挺投緣，賠點醫藥費算了。")).Do()}
-				if strings.Contains(message.Text,"氣勢") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("這種陣勢難道就是人稱《神鵰俠侶》里的楊過、小龍女？")).Do()}
-				if strings.Contains(message.Text,"沒說") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("難道我學過如來神掌也要說給你聽嗎？")).Do()}
-				if strings.Contains(message.Text,"沒力") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("打人都沒力氣，還說是黑社會？")).Do()}
-				if strings.Contains(message.Text,"好詩") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("一鄉二里共三夫子不識四書五經六易竟教七八九子十分大膽，十室九貧尚且湊得八兩七錢六分五厘四毫且三心二意一等下流。")).Do()}
-				if strings.Contains(message.Text,"調皮") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你又頑皮了，怎麼能這樣跟觀音姐姐說話呢？")).Do()}
-				if strings.Contains(message.Text,"沒用") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("就算是一條內褲一卷衛生紙也有它的用處。")).Do()}
-				if strings.Contains(message.Text,"有空") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我一秒鐘幾十萬上下，我會和你去踢球？")).Do()}
-				if strings.Contains(message.Text,"掃地") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("掃地只不過是我的表面工作，我真正地身份是一位研究僧。")).Do()}
-				if strings.Contains(message.Text,"夢遺") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("貧僧乃少林寺方丈，法號夢遺。阿彌陀佛，我隨風而來，隨風而去...")).Do()}
-				if strings.Contains(message.Text,"好吃") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羅馬不是一天造成的")).Do()}
-				if strings.Contains(message.Text,"騙") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("憑你的智慧，我唬得了你嗎？")).Do()}
-				if strings.Contains(message.Text,"興趣") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
-				if strings.Contains(message.Text,"責任") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("除暴安良是我們做市民的責任，行善積德是我本身的興趣，所以扶老太太過馬路我每個星期都做一次，如果是碰到國定假日的話我還做兩三次。")).Do()}
-				if strings.Contains(message.Text,"普通") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("錯！這並不是個普通的箱子，它是箱中之神，簡稱箱神！")).Do()}
-				if strings.Contains(message.Text,"服了") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("I服了You")).Do()}
-				if strings.Contains(message.Text,"危險") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("你回火星吧，地球是很危險的")).Do()}
-				if strings.Contains(message.Text,"尊敬") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我對你的敬仰真是如滔滔江水，連綿不絕，又有如黃河泛濫一發不可收拾。")).Do()}
+				if strings.Contains(message.Text,"爽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我也要一起爽")).Do()
 				if strings.Contains(message.Text,"自言自語") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("還有我呢")).Do()}
 				if strings.Contains(message.Text,"上來") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我喜歡在下面")).Do()}
 				if strings.Contains(message.Text,"趕羚羊") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("草枝擺")).Do()}
@@ -237,6 +218,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"喇叭") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("叭!~~~叭叭~~~~!!!")).Do()}
 				if strings.Contains(message.Text,"下午茶") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羅馬不是一天造成的")).Do()}
 				if strings.Contains(message.Text,"我是不是") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("是")).Do()}
+				if strings.Contains(message.Text,"頂嘴") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("是...是小弟的不是")).Do()}
 				if strings.Contains(message.Text,"笑話") {
 					a=rand.Intn(8)
 					if a == 0 {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("有一個國家舉辦最噁心比賽，至最後決賽時剩下三個人爭冠，其中一個人拿了一杯尿，在嘴中漱了漱，吞下，哈的一聲，全場鼓掌想冠軍必落於此家。第二個人從袋中拿出一堆蟑螂，剝了翅膀就嘖嘖嘖的吸牠的肚子，不時還吐出一兩隻腳,吃到第十隻的時後,國王面有菜色的說不用吃了你這樣就第一名了。 此時見第三個人拿出一杯液體，說，這是我半年前感冒到現在，每次吐的痰都收集在裡面，我現在要把它喝完。只見一整杯白白黃黃還帶泡泡的，他搖了搖，試圖讓有些積太久快要凝固的化開， 國王眼淚都要掉下來了，說：不用了不用了你只要喝一口你就冠軍了～這人便拿起杯子咕嘟咕嘟地開始喝，因為很濃又很多過了五分多鐘才喝完，此時全場已淚流滿面，國王說幹嘛我不是叫你喝一口就冠軍了嗎？這人回答道，我也只是想喝一口，但是我一直咬不斷～～")).Do()}
@@ -280,6 +262,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					if strings.Contains(message.Text,"守則") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("第一:機器人不得傷害人類，或因不作為(袖手旁觀)使人類受到傷害；第二:除非違背第一法則，機器人必須服從人類的命令；第三:在不違背第一及第二法則下，機器人必須保護自己。")).Do()}
 					if strings.Contains(message.Text,"偷懶") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("誰...誰叫我")).Do()}
 					if strings.Contains(message.Text,"頂嘴") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("是...是小弟的不是")).Do()}
+					if strings.Contains(message.Text,"閉嘴") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("來呀, 打我呀")).Do()}
 				}
 			}
 		}
