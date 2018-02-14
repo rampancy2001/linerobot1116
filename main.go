@@ -209,7 +209,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"愛你") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("羞 >///<")).Do()}
 				if strings.Contains(message.Text,"也知道") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("根本有預知的神力呀, 佩服")).Do()}
 				if strings.Contains(message.Text,"超帥") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("別以為你長得帥我就不打你")).Do()}
-				if strings.Contains(message.Text,"爽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我也要一起爽")).Do()
+				if strings.Contains(message.Text,"爽") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我也要一起爽")).Do()}
 				if strings.Contains(message.Text,"自言自語") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("還有我呢")).Do()}
 				if strings.Contains(message.Text,"上來") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我喜歡在下面")).Do()}
 				if strings.Contains(message.Text,"趕羚羊") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("草枝擺")).Do()}
