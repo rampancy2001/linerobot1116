@@ -176,6 +176,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 				if strings.Contains(message.Text,"3D") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("我家樓上正妹32D")).Do()}
 				if strings.Contains(message.Text,"下面") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("老大下的麵很好吃")).Do()}
 				if strings.Contains(message.Text,"百萬業務") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("靖哥哥")).Do()}
+				if strings.Contains(message.Text,"天龍國人") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("哥倫布")).Do()}
 				if strings.Contains(message.Text,"扶") {
 					if strings.Contains(message.Text,"過馬路") {bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage("積積陰陰德")).Do()}
 					}
